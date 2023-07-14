@@ -18,8 +18,12 @@ export interface Platform{
 
 const useGame = (genre? : number) => {
 
-  if(genre != undefined)
+  
+
+  if(genre != undefined){
+  
   return useData<Games>('/games',genre,[genre])
+  }
   else
   return useData<Games>('/games')
 }

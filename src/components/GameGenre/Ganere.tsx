@@ -4,10 +4,11 @@ import ImageCrop from "../../services/ImageCrop";
 import GanreSkeleton from "./GanreSkeleton";
 
 interface Props {
+  genre: number | undefined;
   handleGanre: (value: number) => void;
 }
 
-const Ganere = ({ handleGanre }: Props) => {
+const Ganere = ({ handleGanre, genre }: Props) => {
   const { data, loading } = useGanere();
   const skeletonIndex = [1, 2, 3, 4, 5, 6, 7];
 
@@ -24,7 +25,9 @@ const Ganere = ({ handleGanre }: Props) => {
                   borderRadius="5px"
                 />
                 <Button
-                  variant="link"
+                  size={"md"}
+                  variant={genre == item.id ? "outline" : "link"}
+                  fontWeight={genre == item.id ? "bold" : ""}
                   value={item.id}
                   onClick={() => handleGanre(item.id)}
                 >

@@ -8,7 +8,6 @@ interface Props {
 }
 
 const GameGrid = ({ genre }: Props) => {
-  console.log("GameGrid " + genre);
   const { error, data, loading } = useGame(genre);
   const skeletonIndex = [1, 2, 3, 4, 5, 6];
   return (

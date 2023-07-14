@@ -25,6 +25,7 @@ function App() {
         <Show above="lg">
           <GridItem area="asile" paddingX={5}>
             <Ganere
+              genre={genre}
               handleGanre={(value) => {
                 setGenre(value);
                 console.log(value);
