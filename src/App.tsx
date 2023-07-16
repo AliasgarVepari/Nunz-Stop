@@ -14,7 +14,7 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   orderby: Orderby | null;
-  search: string | null;
+  search: string | undefined;
 }
 
 function App() {
