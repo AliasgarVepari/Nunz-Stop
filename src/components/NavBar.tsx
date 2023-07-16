@@ -4,7 +4,7 @@ import DarkModeButton from "./DarkModeButton";
 import { SearchPanel } from "./SearchPanel";
 
 interface Props {
-  setSearch: (item: string) => void;
+  setSearch: (item: string | undefined) => void;
 }
 
 const NavBar = ({ setSearch }: Props) => {
