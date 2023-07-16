@@ -1,16 +1,17 @@
-import useData from "./useData";
+import genreData from "../data/genre-data"
 
-export interface Genres{
+export interface Genre{
     id : number;
     name : string;
     slug : string;
-    games_count : string;
+    games_count : number;
     image_background : string;
 }
 
 
 const useGanere = () => {
-    return useData<Genres>('/genres');
+    return { data : genreData,
+    loading : false};
 }
 
 export default useGanere;

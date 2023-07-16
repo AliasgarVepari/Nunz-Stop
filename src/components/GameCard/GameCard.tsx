@@ -22,14 +22,12 @@ const GameCard = ({ games, platform }: Props) => (
       height={GameCardConfig.imageHeight}
     />
     <CardBody>
-      {/* <Flex> */}
       <Heading size={"lg"}>{games.name}</Heading>
       <HStack justifyContent="space-between">
         <GameIcon platform={platform} />
 
         <CriticsBadge rating={games.metacritic} />
       </HStack>
-      {/* </Flex> */}
     </CardBody>
   </Card>
 );

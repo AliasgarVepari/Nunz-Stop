@@ -1,11 +1,17 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import DarkModeButton from "./DarkModeButton";
+import { SearchPanel } from "./SearchPanel";
 
-const NavBar = () => {
+interface Props {
+  setSearch: (item: string) => void;
+}
+
+const NavBar = ({ setSearch }: Props) => {
   return (
     <HStack justifyContent="space-between" padding="10px">
       <Image src={logo} boxSize="60px"></Image>
+      <SearchPanel setSearch={setSearch} />
       <DarkModeButton />
     </HStack>
   );
